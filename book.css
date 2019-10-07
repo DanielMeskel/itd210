@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+@media (min-height: 400px) and (min-width: 50px) {
+body {
+    width: 99%;
+    font-size: 1em;
+}
+main {
+    margin: 0;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    font-size: 1.4em;
+}
+table {
+    margin: auto;
+    padding: 0.1%;
+    border: 1px solid #000;
+}
+
+.title {
+    width: 60%;
+}
+}
+@media print {
+body { 
+    margin: 0;
+    background-color: blue;
+    border: none;
+ }
+h1 {
+    text-align: center;
+    font-size: 1.14em;
+}
+table {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.title {
+    width: 68%;
+
+}
+.title2 {
+    width: 23%;
+}
+.title3 {
+    width: 9%;
+    background-color: red;
+    margin: 0;
+}
+}
+
