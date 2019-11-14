@@ -1,168 +1,237 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>ACC IT/CS Library Book List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blurry World: Never FUlly Discovered</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/3dslide.css">
 <style>
-@import url("book.css");
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: grid;
+    grid-template-columns:1fr 4fr 1fr;
+    grid-template-rows:3fr auto auto 1fr;
+    grid-template-areas: "header header header"
+                         "sectiona sectiona aside"
+                         "sectionb sectionb aside"
+                         "footer footer footer"; 
+                         
+    grid-gap: 3px;
+    width: 100%;
+}
+header {
+    background-color: darkcyan;
+    grid-area: header;
+    width: 100%;
+}
+header h1 {
+    color: white;
+    text-align: center;
+}
+/*------------nav---------*/
+nav {
+    grid-area: nav;
+    height: 100vh;
+    position: fixed;
+  
+    
+}
+nav ul {
+    background-color: darkcyan;
+    display: none;
+    grid-template-columns: 10em;
+    grid-template-rows: auto;
+    max-width: 12em;
+    min-height: 100vh;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+nav li {
+    padding: 10px 10px;
+    border-bottom: 2px solid white;
+}
+/*--checkbox--*/
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+input[type="checkbox"]:checked ~ ul{
+    transition: left  0.9s ease-out;
+    display: grid;
+    position: fixed;
+}
+input {
+    display: none;
+}
+label {
+    background-color: white;
+    border-bottom-right-radius: 12px;
+    color: black;
+    font-size: 2.5em;
+    position:fixed;
+    padding: 12px 14px;
+}
+/*-----nav-ends-----*/
+section {
+    display: flex;
+    grid-template-columns: 5fr 3fr;
+    grid-template-areas: "article figure";
+    grid-gap: 10px;
+    padding: 12px 12px;
+   
+}
+section:nth-child(odd)  {
+   grid-area: sectiona;
+   background-color: lightgrey;
+}
+section:nth-child(even) {
+   background-color: lightblue;
+   grid-area: sectionb;
+}
+section figure:nth-child(odd) {
+   
+   flex-order: 1;
+}
+section article{
+   grid-area: article;
+}
+figure img {
+   width: 100%;
+
+}
+section h2 {
+    text-align: center;
+    color: white;
+}
+
+footer  {
+   grid-area: footer;
+   display: flex;
+   background-color:#346c94 ;
+   color: white;
+}
+footer ul {
+    flex: 1;
+    list-style: underlined;
+}
+footer ul li a, footer p a {
+   color: white;
+}
+footer p {
+    flex: 1;
+}
+footer i {
+    flex: 1;
+}
 </style>
 </head>
 <body>
+<nav>
+<label for="drop" class="toggle">☰ </label>
+  <input type="checkbox" id="drop">
+     <ul>
+            
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Grid</a></li>
+            <li><a href="">Contact</a></li>
+    </ul>
+</nav>
 <main>
-<h1>ACC IT/CS Library Book List</h1>
-<table>
-<tr>
-<th class="title">Title</th>
-<th class="title2">LOC Call Number</th>
-<th class="title3">ISBN</th>
-</tr>
-<tr>
-<td>Malcolm X : a life of reinvention</td>
+  <header class="slideshow">
+    <div class="content">
+      <div class="content-carrousel">
+        <figure class="shadow"><img src="media/img/1.jpg" alt="a"></figure>
+	<figure class="shadow"><img src="media/img/2.jpg" alt="b"></figure>
+        <figure class="shadow"><img src="media/img/3.jpg" alt="c"></figure>
+        <figure class="shadow"><img src="media/img/4.jpg" alt="d"></figure>
+      </div>
+    </div>
+  </header>
+  <section>
+    <figure>
+      <img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" alt="a">
+      <figcaption>
+      <p>new</p>
+      </figcaption>
+    </figure>
+    <article>
+   <h2>new</h2>
+   <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
 
-<td>BP223 .Z8 L57636 2011</td>            
-<td>9780670022205</td>
-</tr>
-<tr>
-<td>Mandela : the authorized biography</td>
-<td>DT1974 .S26 1999</td>            
-<td>9780375400193</td>
-</tr>
-<tr>
-<td>My bondage and my freedom</td>
-<td>E449 .D738 1969</td>            
-<td>9780486224572</td>
-</tr>
-<tr>
-<td>Python geospatial development : learn to build sophisticated mapping applications fro</td>
-<td>G70.212 .W47 2013</td>            
-<td>9781782161523</td>
-</tr>
-<tr>
-<td>Human Geography: Landscapes of Human Activities 12th Edition</td>
-<td>GF41 .H93 2012</td>            
-<td>9780078021466</td>
-</tr>
-<tr>
-<td>Human Geography</td>
-<td>GF43 .M27 2013</td>            
-<td>9780470174685</td>
-</tr>
-<tr>
-<td>Ours to Hack and to Own: The Rise of Platform Cooperativism, A New Vision for the Fut</td>
-<td>HM851 .O973 2016</td>            
-<td>9781944869335</td>
-</tr>
-<tr>
-<td>Beyond Transparency: Open Data and the Future of Civic Innovation</td>
-<td>JK468 .T7 B49 2013</td>            
-<td>9780615889085</td>
-</tr>
-<tr>
-<td>Pedagogy of Hope: Reliving Pedagogy of the Oppressed</td>
-<td>LB880 .F732 P432 1994</td>            
-<td>9780826477903</td>
-</tr>
-<tr>
-<td>Freire for the Classroom: A Sourcebook for Liberatory Teaching</td>
-<td>LB1025.2 .F73 1987</td>            
-<td>9780867091977</td>
-</tr>
-<tr>
-<td>The American Community College, 5th Edition</td>
-<td>LB2323 .C55 2008</td>            
-<td>9780470174685</td>
-</tr>
-<tr>
-<td>Pedagogy of the Heart</td>
-<td>LC71 .F7413 1997</td>            
-<td>9780826411310</td>
-</tr>
-<tr>
-<td>Literacy: Reading the Word and the World</td>
-<td>LC149 .F75 1987</td>            
-<td>9780897891264</td>
-</tr>
-<tr>
-<td>The Politics of Education : Culture, Power, and Liberation</td>
-<td>LC149 .F76 1985</td>            
-<td>9780897890434</td>
-</tr>
-<tr>
-<td>Education for Critical Consciousness</td>
-<td>LC191.8 .L29F74 2005</td>            
-<td>9780826477958</td>
-</tr>
-<tr>
-<td>The Shame of the Nation: The Restoration of Apartheid Schooling in America</td>
-<td>LC212.62 .K69 2005</td>            
-<td>9781400052455</td>
-</tr>
-<tr>
-<td>Savage Inequalties: Children in America's Schools</td>
-<td>LC4091 .K69 1991</td>            
-<td>9780517582213</td>
-</tr>
-<tr>
-<td>Prolog programming for artificial intelligence</td>
-<td>Q336 .B74 2001</td>            
-<td>9780201403756</td>
-</tr>
-<tr>
-<td>The Unix Programming Environment</td>
-<td>QA76.6 .K495 1984</td>            
-<td>013937681X</td>
-</tr>
-<tr>
-<td>Code: The Hidden Language of Computer Hardware and Software</td>
-<td>QA76.6 .P495 1999</td>            
-<td>9780735611313</td>
-</tr>
-<tr>
-<td>Data structures using C</td>
-<td>QA76.73 .C15 T46 1990</td>            
-<td>9780131997462</td>
-</tr>
-<tr>
-<td>Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming</td>
-<td>QA76.73 .J39 H38 2019</td>            
-<td>9781593279509</td>
-</tr>
-<tr>
-<td>Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, a</td>
-<td>QA76.73 .P98 P46 2017</td>            
-<td>9781491958704</td>
-</tr>
-<tr>
-<td>Python programming : an introduction to computer science</td>
-<td>QA76.73 .P98 Z45 2004</td>            
-<td>9781887902991</td>
-</tr>
-<tr>
-<td>The Linux Cookbook: Tips and Techniques for Everyday Use</td>
-<td>QA76.76 .O63 S788 2001</td>            
-<td>9781886411487</td>
-</tr>
-<tr>
-<td>The UNIX-haters handbook</td>
-<td>QA76.76 .O63 U54518 1994</td>            
-<td>9781568842035</td>
-</tr>
-<tr>
-<td>Implementing Automated Software Testing: How to Save Time and Lower Costs While Raisi</td>
-<td>QA76.76 .T48 D8744 2009</td>            
-<td>9780321580511</td>
-</tr>
-<tr>
-<td>The Linux database</td>
-<td>QA76.9 .D3 B893 1997</td>            
-<td>9781558284913</td>
-</tr>
-<tr>
-<td>Calculus of a single variable</td>
-<td>QA303 .D59 1994</td>            
-<td>9780534939366</td>
-</tr>
-</table>
+ </p>
+  </article>
+  </section>
+
+  <section>
+      <figure>
+      <img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" alt="a">
+      <figcaption>
+      <p>new</p>
+      </figcaption>
+      </figure>
+
+   <article>
+   <h2>new</h2>
+   <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+ </p>
+    </article>
+  </section>
+<section>
+      <figure>
+      <img src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" alt="a">
+      <figcaption>
+      <p>new</p>
+      </figcaption>
+      </figure>
+
+   <article>
+   <h2>new</h2>
+   <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+ </p>
+    </article>
+  </section>
+
+
+  <aside>
+    <ul>
+       <li><a href="">Design</a></li>
+       <li><a href="">My story</a></li>
+       <li><a href="">About Us</a></li>
+       <li><a href="">Projects</a></li>
+       <li><a href="">Grid</a></li>
+       <li><a href="">Contact</a></li>
+    </ul>
+  </aside>
+  <footer>
+    <ul>        
+       <li><a href="">Design</a></li>
+       <li><a href="">My story</a></li>
+       <li><a href="">About Us</a></li>
+       <li><a href="">Projects</a></li>
+       <li><a href="">Grid</a></li>
+       <li><a href="">Contact</a></li>
+    </ul>
+  </footer>
+
 </main>
+
+
+
 </body>
 </html>
+
+
