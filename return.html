@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> </title>
+	<script>
+		function returnValue() {
+			var myProduct;
+			mypProduct = document.myForm.input1.value *
+				document.myForm.input2.value;
+			return myProduct;
+		}
+	</script>
+	</head>
+	<body>
+		<form name="myForm">
+			Multiply  <input type="text" name="input1" />
+			By        <input type="text" name="input2" />
+			<input type="button" value="Result"
+			oncleck=
+			"alert('The result is ' + returnValue() + '.');" />
+		</form>
+	</body>
+</html>
+
