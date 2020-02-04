@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="Description" content="Sample Web site for learning HTML5 and CSS3" />
+        <link rel="stylesheet" href="css/habitat.css" />
+        <link rel="shortcut icon" href="http://www.habitat.org/sites/default/files/favicon.ico" />
+        <title>Habitat for Humanity Int&#039;l</title>
+    </head>
+    <style>
+@font-face {
+    font-family: arial;
+}
+article {       
+    padding: 10px;
+}
+body {
+    font-family: arial;
+    font-size: 85%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #d8d8d8;
+}
+h1 {
+    text-shadow: 3px 3px 3px #888888;
+    margin-top: 5px; 
+    margin-bottom: 0px; 
+}
+nav {
+    background: #d8d8d8;
+    font-size: 85%; 
+    font-weight: bold;
+    float: left;
+    height: 420px;
+    padding-right: 24px;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+section {
+    background-image: url("../media/globe.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.floatright {
+    float: right;
+    clear: right;
+    margin: 10px;
+}
+.navlinks {
+    display: block;
+    border: 2px solid #a1a1a1;
+    padding: 2px 5px; 
+    background: #add8e6;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #888888;
+}
+    </style>
+    <body>
+        <nav>
+            <p><a class="navlinks" href="http://www.habitat.org/how/about_us.aspx">Learn more</a></p>
+            <p><a class="navlinks" href="http://www.habitat.org/getinv/volunteer_programs.aspx">Volunteer</a></p>
+            <p><a class="navlinks" href="http://www.habitat.org/gov">Advocate</a></p>
+            <p><a class="navlinks" href="https://www.habitat.org/cd/giving/donate.aspx?r=r&amp;link=1">Donate</a></p>
+        </nav>
+
+        <section>
+
+            <article>
+
+                <h1>Registration Form</h1>
+
+                <p>
+                Habitat for Humanity needs volunteers. Do you want to help? Complete the registration form and join our worldwide fight against substandard housing.
+                </p>
+
+                <form autocomplete="on">
+                    <fieldset name="personal_info">
+                        <legend>Personal Information:</legend>
+                        Title: <input list="titles" name="title"><br>
+                        <datalist id="titles">
+                            <option value="Mr.">
+                            <option value="Mrs.">
+                            <option value="Ms.">
+                        </datalist>
+                        First Name: <input type="text" name="firstname" maxlength="8"><br>
+                        Last Name: <input type="text" name="lastname" maxlength="8"><br>
+                        Date of Birth: <input type="date" name="dob"><br>
+
+                        Best Home Building Skill:<br>
+                        <textarea name="bestskill" placeholder="Carpentry" maxlength="9">
+                        </textarea>
+
+                    </fieldset>
+                    <br>
+
+                    <fieldset name="user-experience">
+                        <legend>Experience:</legend>
+                        Years of Home Building Experience: 0 <input type="range" name="experience" min="0" max="10"> 10+ <p>
+                        Number of Habitat Homes Built: <input type="number" name="homesbuilt" min="0" max="5"></p>
+
+                        <input type="submit" formaction="http://ss1.ciwcertified.com/cgi-bin/process.pl">
+
+                    </fieldset>
+
+                </form>
+
+            </article>
+
+        </section>
+
+    </body>
+</html>
+
